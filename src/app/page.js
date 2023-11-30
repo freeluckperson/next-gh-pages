@@ -1,18 +1,13 @@
-import Link from "next/link";
+import Header from "@/components/layout/Header.js";
+import Hero from "@/components/layout/Hero.js";
+import HomeMenu from "@/components/layout/HomeMenu";
 
 export default function Home() {
   return (
     <>
-      <header>
-        <Link href="#">ST PIZZA</Link>
-        <nav>
-          <Link href="">Home</Link>
-          <Link href="">Menu</Link>
-          <Link href="">About</Link>
-          <Link href="">Contact</Link>
-          <Link href="">Login</Link>
-        </nav>
-      </header>
+      <Header />
+      <Hero />
+      <HomeMenu />
     </>
   );
 }
