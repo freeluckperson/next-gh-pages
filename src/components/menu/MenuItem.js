@@ -103,7 +103,7 @@ export default function MenuItem() {
       <div class="p-4 md:w-1/3">
         <div class="h-full border-2 border-g rounded-lg overflow-hidden">
           <img
-            class="lg:h-48 md:h-36 w-full object-contain object-center"
+            class="w-full"
             width={100}
             height={100}
             src={"/pizza.png"}
@@ -116,11 +116,11 @@ export default function MenuItem() {
             <h1 class="title-font text-lg font-medium text-white mb-3">
               The Catalyzer
             </h1>
-            <p class="leading-relaxed mb-3">
+            <p class="leading-relaxed mb-3 text-justify" style={{textIndent:"15px"}}>
               Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
               microdosing tousled waistcoat.
             </p>
-            <button className="w-20 border-2 border-gray-400 rounded-md p-1 hover:bg-primary hover:text-white">
+            <button className="w-20 border-2 border-gray-400 rounded-full p-1 hover:bg-primary hover:text-white">
               Buy
             </button>
           </div>
