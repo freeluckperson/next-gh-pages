@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function home(params) {
   return (
     <>
-      <header className="flex items-center justify-between mb-4">
+      <header className="flex items-center justify-between">
         <Link className="text-primary font-semibold text-2xl" href="#">
           ST PIZZA
         </Link>
