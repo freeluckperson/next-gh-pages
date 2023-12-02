@@ -120,7 +120,7 @@ export default function MenuItem() {
               Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
               microdosing tousled waistcoat.
             </p>
-            <button className="w-20 border-2 border-gray-400 rounded-full p-1 hover:bg-primary hover:text-white">
+            <button className="w-20 border-2 border-gray-500 rounded-full p-1 hover:bg-primary hover:text-white">
               Buy
             </button>
           </div>
