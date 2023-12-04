@@ -1,34 +1,34 @@
 // const Cards = () => {
 //   return (
 //     <>
-//       <section class="text-gray-400 body-font">
-//         <div class="container py-24 mx-auto">
-//           <div class="flex flex-wrap -m-4">
-//             <div class="p-4 md:w-1/3">
-//               <div class="h-full border-2 border-g rounded-lg overflow-hidden">
+//       <section className="text-gray-400 body-font">
+//         <div className="container py-24 mx-auto">
+//           <div className="flex flex-wrap -m-4">
+//             <div className="p-4 md:w-1/3">
+//               <div className="h-full border-2 border-g rounded-lg overflow-hidden">
 //                 <Image
-//                   class="lg:h-48 md:h-36 w-full object-contain object-center"
+//                   className="lg:h-48 md:h-36 w-full object-contain object-center"
 //                   width={100}
 //                   height={100}
 //                   src={"/pizza.png"}
 //                   alt="blog"
 //                 />
-//                 <div class="p-6">
-//                   <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
+//                 <div className="p-6">
+//                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
 //                     CATEGORY
 //                   </h2>
-//                   <h1 class="title-font text-lg font-medium text-white mb-3">
+//                   <h1 className="title-font text-lg font-medium text-white mb-3">
 //                     The Catalyzer
 //                   </h1>
-//                   <p class="leading-relaxed mb-3">
+//                   <p className="leading-relaxed mb-3">
 //                     Photo booth fam kinfolk cold-pressed sriracha leggings
 //                     jianbing microdosing tousled waistcoat.
 //                   </p>
-//                   <div class="flex items-center flex-wrap ">
-//                     <a class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">
+//                   <div className="flex items-center flex-wrap ">
+//                     <a className="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">
 //                       Learn More
 //                       <svg
-//                         class="w-4 h-4 ml-2"
+//                         className="w-4 h-4 ml-2"
 //                         viewBox="0 0 24 24"
 //                         stroke="currentColor"
 //                         stroke-width="2"
@@ -40,9 +40,9 @@
 //                         <path d="M12 5l7 7-7 7"></path>
 //                       </svg>
 //                     </a>
-//                     <span class="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-g">
+//                     <span className="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-g">
 //                       <svg
-//                         class="w-4 h-4 mr-1"
+//                         className="w-4 h-4 mr-1"
 //                         stroke="currentColor"
 //                         stroke-width="2"
 //                         fill="none"
@@ -55,9 +55,9 @@
 //                       </svg>
 //                       1.2K
 //                     </span>
-//                     <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+//                     <span className="text-gray-500 inline-flex items-center leading-none text-sm">
 //                       <svg
-//                         class="w-4 h-4 mr-1"
+//                         className="w-4 h-4 mr-1"
 //                         stroke="currentColor"
 //                         stroke-width="2"
 //                         fill="none"
@@ -100,26 +100,15 @@ export default function MenuItem() {
           - Add to cart $12
         </button>
       </div> */}
-      <div class="p-4 md:w-1/3">
-        <div class="h-full border-2 border-g rounded-lg overflow-hidden">
-          <img
-            class="w-full"
-            width={100}
-            height={100}
-            src={"/pizza.png"}
-            alt="blog"
-          />
-          <div class="p-6 grid place-items-center ">
-            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
+
+      <div className="p-4 md:w-1/3 ">
+        <div className="flex flex-wrap justify-center text-center border-2 border-g rounded-lg overflow-hidden">
+          <img className="h-40 w-40" src={"/pizza.png"} alt="blog" />
+          <div className="p-6 ">
+            <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 ">
               CATEGORY
             </h2>
-            <h1 class="title-font text-lg font-medium text-white mb-3">
-              The Catalyzer
-            </h1>
-            <p class="leading-relaxed mb-3 text-justify" style={{textIndent:"15px"}}>
-              Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-              microdosing tousled waistcoat.
-            </p>
+            <p className="mb-3 ">Photo booth fam kinfolk</p>
             <button className="w-20 border-2 border-gray-500 rounded-full p-1 hover:bg-primary hover:text-white">
               Buy
             </button>
