@@ -1,4 +1,3 @@
-import Header from "@/components/layout/Header.js";
 import Hero from "@/components/layout/Hero.js";
 import HomeMenu from "@/components/layout/HomeMenu";
 import SectionHeader from "@/components/layout/SectionHerder";
@@ -6,7 +5,6 @@ import SectionHeader from "@/components/layout/SectionHerder";
 export default function Home() {
   return (
     <>
-      <Header />
       <Hero />
       <HomeMenu />
       <section className="text-center my-16">
@@ -47,16 +45,13 @@ export default function Home() {
         </p>
       </section>
       <section className="text-center">
-        <SectionHeader subHeader={"Don´t hesitate"} mainHeader={"Contact us"} />
+        <SectionHeader subHeader={"Don't hesitate"} mainHeader={"Contact us"} />
         <div className="mt-8">
           <a className="text-4xl underline text-gray-500" href="tel:+12458745">
             +124 587 45 45
           </a>
         </div>
       </section>
-      <footer className="border-t p-8 text-center text-gray-500 mt-16">
-        &copy; 2023 All rights reserved
-      </footer>
     </>
   );
 }
