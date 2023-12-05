@@ -15,13 +15,14 @@ export default function RegisterPage() {
   async function handleFormSubmit(ev) {
     ev.preventDefault();
     setCreatingUser(true);
+    setUserCreate(false);
     setError(false);
     const response = await fetch("/api/register", {
       method: "POST",
       body: JSON.stringify({ email: form.email, password: form.password }),
       headers: { "Content-Type": "application/json" },
     });
-    
+
     if (response.ok) {
       setUserCreate(true);
     } else {
@@ -87,6 +88,12 @@ export default function RegisterPage() {
             <img src="/google.png" height={24} width={24} alt="..." />
             Login with google
           </button>
+          <div className="text-center text-sm my-2 border-t border-b-2">
+            Existing account?{" "}
+            <Link className="text-primary" href={"/login"}>
+              Login Here
+            </Link>
+          </div>
         </form>
       </section>
     </div>
