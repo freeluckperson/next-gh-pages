@@ -32,7 +32,6 @@ export default function RegisterPage() {
             className="h-10 items-center m-1 w-72 border-2 rounded-lg"
             type="email"
             name=""
-            id=""
             placeholder="email"
             value={form.email}
             onChange={(ev) => setForm({ ...form, email: ev.target.value })}
@@ -41,7 +40,6 @@ export default function RegisterPage() {
             className="h-10 items-center m-1 w-72 border-2 rounded-lg"
             type="password"
             name=""
-            id=""
             placeholder="password"
             value={form.password}
             onChange={(ev) => setForm({ ...form, password: ev.target.value })}
