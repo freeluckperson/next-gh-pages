@@ -25,6 +25,7 @@ export default function RegisterPage() {
 
     if (response.ok) {
       setUserCreate(true);
+      setForm({ email: "", password: "" });
     } else {
       setError(true);
     }
@@ -34,7 +35,7 @@ export default function RegisterPage() {
 
   return (
     <div className="">
-      <section className="mt-8 h-full flex flex-wrap justify-center">
+      <section className="mt-8 h-full flex flex-wrap justify-center ">
         <form
           className="grid place-items-center"
           action=""
@@ -53,7 +54,7 @@ export default function RegisterPage() {
             <div className="text-center my-4">
               An error as occurred
               <br />
-              Please try later
+              Please try again
             </div>
           )}
           <input
