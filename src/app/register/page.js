@@ -34,7 +34,7 @@ export default function RegisterPage() {
 
   return (
     <div className="">
-      <section className="mt-8 h-full flex flex-wrap justify-center ">
+      <section className="mt-8 h-full flex flex-wrap justify-center">
         <form
           className="grid place-items-center"
           action=""
