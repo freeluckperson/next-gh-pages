@@ -2,36 +2,50 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { signIn } from 'next-auth/react'
 
 
 
 export default function LoginPage() {
-  const [inputChange, setInputChange] = useState({
-    email: "",
-    password: "",
-  });
+  const [loginInProgress, setLoginInProgress] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  async function handleFormSubmit(ev) {
+    ev.preventDefault()
+    setLoginInProgress(true)
+
+    await signIn("credentials", { email, password })
+
+    setLoginInProgress(false)
+  }
 
   return (
     <>
-      <section className="mt-8 h-full flex flex-wrap justify-center">
-        <form className="grid place-items-center">
+      <section className="mt-8 h-full flex flex-wrap justify-center"  >
+        <form className="grid place-items-center" onSubmit={handleFormSubmit}>
           <h1 className="text-center text-primary text-4xl">Login</h1>
           <input
             className={`h-10 items-center m-1 w-72 border-2 rounded-lg `}
             type="email"
+            name="email"
             placeholder="email"
-            value={inputChange.email}
-            onChange={e => setInputChange({ ...inputChange, email: e.target.value })}
+            value={email}
+            disabled={loginInProgress}
+            onChange={e => setEmail(e.target.value)}
           />
           <input
             className={`h-10 items-center m-1 w-72 border-2 rounded-lg `}
             type="password"
+            name="password"
             placeholder="password"
-            value={inputChange.password}
-            onChange={e => setInputChange({ ...inputChange, password: e.target.value })}
+            value={password}
+            disabled={loginInProgress}
+            onChange={e => setPassword(e.target.value)}
           />
           <button
             className="h-10 items-center m-1 w-72 border-2  rounded-lg flex justify-center gap-4 hover:text-white bg-primary"
+            disabled={loginInProgress}
             type="submit"
           >
             Login
